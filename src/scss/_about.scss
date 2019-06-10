@@ -4,6 +4,8 @@
   top: 1rem;
   right: 1rem;
 
+  outline: 0;
+
   .about__github {
     display: block;
 
@@ -12,9 +14,13 @@
 
     fill: rgba($color-text, 0.375);
     transition: fill .25s;
+  }
 
-    &:hover {
-      fill: rgba($color-text, 0.75);
-    }
+  &:hover .about__github {
+    fill: rgba($color-text, 0.75);
+  }
+
+  &:focus .about__github {
+    fill: rgba($color-text, 0.75);
   }
 }

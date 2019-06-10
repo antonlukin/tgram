@@ -21,6 +21,11 @@
     border-radius: 2px;
 
     -webkit-appearance: none;
+
+    &:focus {
+      border-color: rgba($color-links, 0.625);
+      box-shadow: 0 0 0 0.125rem rgba($color-links, 0.25);
+    }
   }
 
   .form__button {
