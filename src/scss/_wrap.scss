@@ -1,0 +1,12 @@
+.wrap {
+  display: flex;
+  position: relative;
+
+  height: 60vh;
+  min-height: 15rem;
+  padding: 2rem;
+
+  @media screen and (max-width: 767px) {
+    padding: 1rem;
+  }
+}

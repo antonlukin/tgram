@@ -1,0 +1,25 @@
+{
+  "name": "tgram.link",
+  "version": "1.0.0",
+  "author": "Anton Lukin",
+  "description": "tgram.link public repository",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonlukin/tgram.git"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -1,0 +1,20 @@
+.about {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  .about__github {
+    display: block;
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    fill: rgba($color-text, 0.375);
+    transition: fill .25s;
+
+    &:hover {
+      fill: rgba($color-text, 0.75);
+    }
+  }
+}

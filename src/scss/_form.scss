@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  position: relative;
+
+  max-width: 100%;
+  margin: auto;
+
+  .form__input {
+    display: block;
+
+    outline: none;
+
+    width: 40rem;
+    max-width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+
+    font-size: 1.25rem;
+    color: $color-text;
+
+    border: solid 1px rgba($color-text, 0.25);
+    border-radius: 2px;
+
+    -webkit-appearance: none;
+  }
+
+  .form__button {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    visibility: hidden;
+
+    outline: none;
+    cursor: pointer;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+
+    background: none;
+    border: none;
+
+    transform: translateY(-50%);
+
+    stroke: rgba($color-text, 0.75);
+    transition: opacity 0.125s, stroke 0.375s;
+
+    &:hover {
+      stroke: $color-links;
+    }
+  }
+
+  .form__message {
+    display: block;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0.125rem;
+
+    width: 100%;
+    opacity: 0;
+
+    font-size: 0.75rem;
+    color: $color-links;
+
+    transition: opacity 0.75s;
+  }
+
+  &.form--filled .form__button {
+    visibility: visible;
+    opacity: 0.75;
+  }
+
+  &.form--copied .form__message {
+    opacity: 0.75;
+    transition-duration: 0.375s;
+  }
+}
