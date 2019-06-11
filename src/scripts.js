@@ -19,8 +19,12 @@
       var parser = document.createElement('a');
       parser.href = field;
 
-      var protocol = window.location.protocol + '//';
-      input.value = protocol + window.location.host + parser.pathname;
+      // Replace parser with current location origin
+      parser.protocol = window.location.protocol;
+      parser.host = window.location.host;
+
+      // Set updated input value
+      input.value = parser.href;
       input.select();
 
       // Copy to clipboard

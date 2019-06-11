@@ -36,6 +36,6 @@
         </a>
     </div>
 
-    <script>!function(){"use strict";var e=document.getElementById("form"),t=e.querySelector("input");e.addEventListener("submit",function(o){o.preventDefault();var n=t.value.replace(/^@/,"");if(n.length>0){var a=document.createElement("a");a.href=n;var c=window.location.protocol+"//";t.value=c+window.location.host+a.pathname,t.select(),document.execCommand("copy")&&(e.classList.add("form--copied"),setTimeout(function(){e.classList.remove("form--copied")},1e3)),document.getSelection().removeAllRanges()}}),t.addEventListener("keyup",function(){var o=t.value.replace(/^@/,"");e.classList.remove("form--filled"),o.length>0&&e.classList.add("form--filled")})}();</script>
+    <script>!function(){"use strict";var e=document.getElementById("form"),t=e.querySelector("input");e.addEventListener("submit",function(o){o.preventDefault();var n=t.value.replace(/^@/,"");if(n.length>0){var c=document.createElement("a");c.href=n,c.protocol=window.location.protocol,c.host=window.location.host,t.value=c.href,t.select(),document.execCommand("copy")&&(e.classList.add("form--copied"),setTimeout(function(){e.classList.remove("form--copied")},1e3)),document.getSelection().removeAllRanges()}}),t.addEventListener("keyup",function(){var o=t.value.replace(/^@/,"");e.classList.remove("form--filled"),o.length>0&&e.classList.add("form--filled")})}();</script>
 </body>
 </html>
