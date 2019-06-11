@@ -29,31 +29,38 @@
   }
 
   .form__button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 50%;
-    right: 0.5rem;
+    top: 0;
+    right: 0;
     visibility: hidden;
 
     outline: none;
     cursor: pointer;
 
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 100%;
     margin: 0;
     padding: 0;
     opacity: 0;
 
     background: none;
     border: none;
+    transition: opacity 0.125s;
 
-    transform: translateY(-50%);
+    .form__button-icon {
+      width: 1rem;
+      height: 1rem;
 
-    stroke: rgba($color-text, 0.75);
-    transition: opacity 0.125s, stroke 0.375s;
+      fill: $color-text;
+      transition: fill 0.5s, transform 0.375s;
+    }
 
-    &:hover {
-      stroke: $color-links;
+    &:hover .form__button-icon {
+      transform: translateX(3px);
+      fill: $color-links;
     }
   }
 
@@ -73,8 +80,8 @@
   }
 
   &.form--filled .form__button {
-    visibility: visible;
     opacity: 0.75;
+    visibility: visible;
   }
 
   &.form--copied .form__message {

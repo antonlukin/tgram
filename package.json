@@ -1,6 +1,6 @@
 {
   "name": "tgram.link",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Anton Lukin",
   "description": "tgram.link public repository",
   "main": "gulpfile.js",

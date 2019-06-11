@@ -62,26 +62,34 @@ body {
       border-color: rgba(0, 105, 255, 0.625);
       box-shadow: 0 0 0 0.125rem rgba(0, 105, 255, 0.25); }
   .form .form__button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
-    top: 50%;
-    right: 0.5rem;
+    top: 0;
+    right: 0;
     visibility: hidden;
     outline: none;
     cursor: pointer;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 100%;
     margin: 0;
     padding: 0;
     opacity: 0;
     background: none;
     border: none;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    stroke: rgba(85, 85, 85, 0.75);
-    transition: opacity 0.125s, stroke 0.375s; }
-    .form .form__button:hover {
-      stroke: #0069ff; }
+    transition: opacity 0.125s; }
+    .form .form__button .form__button-icon {
+      width: 1rem;
+      height: 1rem;
+      fill: #555555;
+      transition: fill 0.5s, -webkit-transform 0.375s;
+      transition: fill 0.5s, transform 0.375s;
+      transition: fill 0.5s, transform 0.375s, -webkit-transform 0.375s; }
+    .form .form__button:hover .form__button-icon {
+      -webkit-transform: translateX(3px);
+              transform: translateX(3px);
+      fill: #0069ff; }
   .form .form__message {
     display: block;
     position: absolute;
@@ -93,8 +101,8 @@ body {
     color: #0069ff;
     transition: opacity 0.75s; }
   .form.form--filled .form__button {
-    visibility: visible;
-    opacity: 0.75; }
+    opacity: 0.75;
+    visibility: visible; }
   .form.form--copied .form__message {
     opacity: 0.75;
     transition-duration: 0.375s; }
@@ -105,13 +113,13 @@ body {
   top: 1rem;
   right: 1rem;
   outline: 0; }
-  .about .about__github {
+  .about .about__icon {
     display: block;
     width: 1.5rem;
     height: 1.5rem;
     fill: rgba(85, 85, 85, 0.375);
     transition: fill .25s; }
-  .about:hover .about__github {
+  .about:hover .about__icon {
     fill: rgba(85, 85, 85, 0.75); }
-  .about:focus .about__github {
+  .about:focus .about__icon {
     fill: rgba(85, 85, 85, 0.75); }

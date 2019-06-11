@@ -6,7 +6,7 @@
 
   outline: 0;
 
-  .about__github {
+  .about__icon {
     display: block;
 
     width: 1.5rem;
@@ -16,11 +16,11 @@
     transition: fill .25s;
   }
 
-  &:hover .about__github {
+  &:hover .about__icon {
     fill: rgba($color-text, 0.75);
   }
 
-  &:focus .about__github {
+  &:focus .about__icon {
     fill: rgba($color-text, 0.75);
   }
 }
