@@ -1,7 +1,7 @@
 # tgram.link
 
 **Contributors:** Anton Lukin  
-**Version:** 1.0.0  
+**Version:** 1.0  
 **License:** MIT License  
 **License URI:** https://github.com/antonlukin/tgram/blob/master/LICENSE  
 
