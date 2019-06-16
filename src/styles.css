@@ -23,6 +23,9 @@ body {
 ::-webkit-input-placeholder {
   color: rgba(85, 85, 85, 0.375); }
 
+::-moz-placeholder {
+  color: rgba(85, 85, 85, 0.375); }
+
 :-ms-input-placeholder {
   color: rgba(85, 85, 85, 0.375); }
 
@@ -83,12 +86,9 @@ body {
       width: 1rem;
       height: 1rem;
       fill: #555555;
-      transition: fill 0.5s, -webkit-transform 0.375s;
-      transition: fill 0.5s, transform 0.375s;
-      transition: fill 0.5s, transform 0.375s, -webkit-transform 0.375s; }
+      transition: fill 0.5s, transform 0.375s; }
     .form .form__button:hover .form__button-icon {
-      -webkit-transform: translateX(3px);
-              transform: translateX(3px);
+      transform: translateX(3px);
       fill: #0069ff; }
   .form .form__message {
     display: block;
