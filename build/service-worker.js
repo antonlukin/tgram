@@ -1,4 +1,4 @@
-const CACHE = 'offline-1.0.4';
+const CACHE = 'offline-1.0.5';
 
 
 /**
@@ -7,7 +7,7 @@ const CACHE = 'offline-1.0.4';
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      cache.addAll(['/']);
+      cache.addAll(['/', '/favicon.ico']);
     })
   );
 });
