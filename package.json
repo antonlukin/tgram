@@ -1,6 +1,6 @@
 {
   "name": "tgram.link",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Anton Lukin",
   "description": "tgram.link public repository",
   "main": "gulpfile.js",
@@ -12,7 +12,6 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-inline-source": "^4.0.0",
     "gulp-plumber": "^1.2.1",

@@ -36,6 +36,6 @@
         </a>
     </div>
 
-    <script>!function(){"use strict";var e=document.getElementById("form"),t=e.querySelector("input");e.addEventListener("submit",function(o){o.preventDefault();var n=t.value.replace(/^@/,"");if(n.length>0){var c=document.createElement("a");c.href=n,c.protocol=window.location.protocol,c.host=window.location.host,t.value=c.href,t.select(),document.execCommand("copy")&&(e.classList.add("form--copied"),setTimeout(function(){e.classList.remove("form--copied")},1e3)),document.getSelection().removeAllRanges()}}),t.addEventListener("keyup",function(){var o=t.value.replace(/^@/,"");e.classList.remove("form--filled"),o.length>0&&e.classList.add("form--filled")})}();</script>
+    <script>"use strict";"serviceWorker"in navigator&&navigator.serviceWorker.register("/service-worker.js");var form=document.getElementById("form"),input=form.querySelector("input");form.addEventListener("submit",function(e){e.preventDefault();var o=input.value.replace(/^@/,"");if(o.length>0){var t=document.createElement("a");t.href=o,t.protocol=window.location.protocol,t.host=window.location.host,input.value=t.href,input.select(),document.execCommand("copy")&&(form.classList.add("form--copied"),setTimeout(function(){form.classList.remove("form--copied")},1e3)),document.getSelection().removeAllRanges()}}),input.addEventListener("keyup",function(){var e=input.value.replace(/^@/,"");form.classList.remove("form--filled"),e.length>0&&form.classList.add("form--filled")});</script>
 </body>
 </html>

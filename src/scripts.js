@@ -1,54 +1,62 @@
+'use strict';
+
 /**
- * Convert field input on paste or form
+ * Register service worker
  */
-(function () {
-  'use strict';
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+}
 
-  // Get form element
-  var form = document.getElementById('form');
+// Get form element
+var form = document.getElementById('form');
 
-  // Find input inside form
-  var input = form.querySelector('input');
+// Find input inside form
+var input = form.querySelector('input');
 
-  // Convert link on form submit
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var field = input.value.replace(/^@/, '');
 
-    if (field.length > 0) {
-      var parser = document.createElement('a');
-      parser.href = field;
+/**
+ * Convert link on form submit
+ */
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  var field = input.value.replace(/^@/, '');
 
-      // Replace parser with current location origin
-      parser.protocol = window.location.protocol;
-      parser.host = window.location.host;
+  if (field.length > 0) {
+    var parser = document.createElement('a');
+    parser.href = field;
 
-      // Set updated input value
-      input.value = parser.href;
-      input.select();
+    // Replace parser with current location origin
+    parser.protocol = window.location.protocol;
+    parser.host = window.location.host;
 
-      // Copy to clipboard
-      if (document.execCommand('copy')) {
-        // Show message
-        form.classList.add('form--copied');
+    // Set updated input value
+    input.value = parser.href;
+    input.select();
 
-        setTimeout(function () {
-          form.classList.remove('form--copied');
-        }, 1000);
-      }
+    // Copy to clipboard
+    if (document.execCommand('copy')) {
+      // Show message
+      form.classList.add('form--copied');
 
-      // Clear selection
-      document.getSelection().removeAllRanges();
+      setTimeout(function () {
+        form.classList.remove('form--copied');
+      }, 1000);
     }
-  });
 
-  // Show button if input not empty
-  input.addEventListener('keyup', function () {
-    var field = input.value.replace(/^@/, '');
-    form.classList.remove('form--filled');
+    // Clear selection
+    document.getSelection().removeAllRanges();
+  }
+});
 
-    if (field.length > 0) {
-      form.classList.add('form--filled');
-    }
-  });
-})();
+
+/**
+ * Show button if input not empty
+ */
+input.addEventListener('keyup', function () {
+  var field = input.value.replace(/^@/, '');
+  form.classList.remove('form--filled');
+
+  if (field.length > 0) {
+    form.classList.add('form--filled');
+  }
+});
