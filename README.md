@@ -1,13 +1,6 @@
 # tgram.link
 
-**Contributors:** Anton Lukin  
-**Version:** 1.0  
-**License:** MIT License  
-**License URI:** https://github.com/antonlukin/tgram/blob/master/LICENSE  
-
-## Description
-
-Replace t.me with tgram.link or use link generator on website to create not-banned t.me urls
+Replace t.me with tgram.link or use link generator on website to create not-banned t.me urls.
 
 ## Privacy
 
